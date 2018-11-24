@@ -1,42 +1,58 @@
-// Create an object that represents a "warrior".This warrior has the following properties:
+// Create a "student" object. The student should have the following properties:
 
-// 1. equipment, an array containing the values "sword" and "shield".
+// equipment(array).
+// energy(number).
+// grades(number).
+// uniform(object with top, bottoms, shoes properties).
 
-// 2. energy, defaults to the number 100
-
-// 3. location, an object with two properties: x and y.The values of x and y are numeric.
-
-// 4. a method *walk()* which updates the warrior's location. 
-//     If the warrior's location is x: 10 and y: 5 then walk(2, 0) will update the location to x: 12 and y: 5.
-
-// 5. a method *strike()* which uses up energy.
-//     If the warrior's energy is at 100 then strike(25) will reduce the energy to 75.
-
-// 6. a method *pickUpEquipment()* which adds the argument(a string) to the equipment array.
-
-const warrior = {
-    equipment: ["sword", "shield"],
+const student = {
+    equipment: ["backpack"],
     energy: 100,
-    location: {x: 10, y: 2},
-    walk: function(a,b) {
-        this.location.x += a;
-        this.location.y += b;
+    grades: 80,
+    uniform: {top: "pink crop top", bottoms: "jeans", shoes: "doc martens"},
+// 1. create a method that takes in food(number of calories) and then updates energy.
+    food: function(a) {
+        this.energy += a;
     },
-    strike: function(c) {
-        this.energy -= c;
+// 2. create a method that takes in new equipment that will update our equipment array.
+    newEquipment: function(b) {
+        this.equipment.push(b);
     },
-    pickUpEquipment: function(d) {
-        warrior.equipment.push(d);
+// 3. create a method that will change the uniform (since everyday you wear something different).
+    changeUniform: function(c,d,e) {
+        this.uniform.top = c;
+        this.uniform.bottoms = d;
+        this.uniform.shoes = e;
+    },
+// 4. create a method *study time* that takes time studied(minutes) that will update             your grades and deplete your energy.
+//    For every hour that you study, your grades go up by 5 % 
+//      (example: if your grade is 60, and you study an hour, your grade will be 63) .
+//    For every hour you study, your energy goes down by 2.
+//      Bonus: if your energy goes below 0, your grades go down(10 %).
+    studyTime: function(f) {
+        // define the amount of time studied in minutes
+        let timeStudied = f;
+        // how many times does that number divide by 60 i.e. how many hours
+
+        // for every hour, increase grades by 5%
+
+        // for every hour, decrease energy by 2
+
+        // if energy goes below 0, grades decrease by 10%
     }
 }
-console.log(warrior.location.x, warrior.location.y);
-warrior.walk(4,4);
-console.log(warrior.location.x, warrior.location.y)
 
-console.log(warrior.energy);
-warrior.strike(25);
-console.log(warrior.energy);
+console.log(student.energy);
+student.food(8);
+console.log(student.energy);
+document.write(`After eating, my energy is now at ${student.energy}.`);
 
-console.log(warrior.equipment);
-warrior.pickUpEquipment("invisibility cloak");
-console.log(warrior.equipment);
+console.log(student.equipment);
+student.newEquipment("pencilcase");
+console.log(student.equipment);
+document.write(` I use my ${student.equipment[0]} and ${student.equipment[1]} for school.`);
+
+console.log(student.uniform);
+student.changeUniform("blazer","short shorts","jandals");
+console.log(student.uniform);
+document.write(` Today I wore a ${student.uniform.top}, ${student.uniform.bottoms}, and ${student.uniform.shoes} to school.`);
