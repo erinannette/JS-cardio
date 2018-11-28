@@ -1,10 +1,4 @@
-# Static Boilerplate
+# JS CARDIO
 
-### Getting started
-
-Clone this repository
-In terminal, run `rm -r .git` to remove any commit history from the current repo
-
-Run `git init` to create a new `.git` folder
-
-Run `npm i` to get started, and run `gulp` to start the server!
+This is a collection of daily JS and jQuery exercises that I am collecting to document my progress over the next few months.
+My goal is to commit to a minimum of an hour a day.
