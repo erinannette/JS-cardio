@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Using jQuery Docs</title>
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<h3>View Details of:</h3>
+		<ul class="listing">
+			<li>
+				<a href="#" class="contactLink" data-email="drew@hackeryou.com" data-website="http://drewminns.com">Drew Minns</a>
+			</li>
+			<li>
+				<a href="#" class="contactLink" data-email="ryan@hackeryou.com" data-website="http://ryanchristiani.com/">Ryan Christiani</a>
+			</li>
+			<li>
+				<a href="#" class="contactLink" data-email="kristen@hackeryou.com" data-website="http://kristenspencer.ca/">Kristen Spencer</a>
+			</li>
+		</ul>
+
+		<h2 class="showInfo"></h2>
+
+	</div>
+
+	<style>
+		article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+		input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+		
+		.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+		
+		* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+		body {
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+			background: #E7CF17;
+		}
+
+		.wrapper {
+			width: 800px;
+			margin: 0 auto;
+			padding: 25px 0;
+		}
+
+		ul.listing { padding: 0; }
+		ul.listing li { display: inline-block; }
+
+		ul.listing li a {
+			background: #119CAF;
+			color: white;
+			text-decoration: none;
+			padding: 15px;
+			text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+		}
+
+		h2 {
+			font-size: 48px;
+			color: white;
+			text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+			font-weight: 700;
+			letter-spacing: -1px;
+		}
+
+		h2 a { color: white; }
+
+		h3 {
+			font-size: 36px;
+			color: white;
+			text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+			font-weight: 700;
+			letter-spacing: -1px;
+		}
+
+	</style>
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script>
+
+	$(function() {
+
+		// Use jQuery to select the a tags in the document
+		// add a click event handler and prevent the default action of the link (e.preventDefault)
+		$("a.contactLink").on("click", function(e){
+			e.preventDefault();
+
+			// Find a jQuery method that gets the text inside of the clicked element.
+			// Save the text in a variable for use later
+			const name = $(this).text();
+			
+			// Find a jQuery method that will get the contents of the data attributes on the clicked element
+			// Store each value in it's own variable
+			const email = $(this).data("email");
+			const website = $(this).data("website");
+
+			// Create a variable that holds the string:
+			// <a href="**website**">**name**</a>'s email is <a href="mailto:**email**">**email**</a>'
+			const info = `<a href="${website}">${name}</a>'s email is <a href="mailto:${email}">${email}</a>`
+			console.log(info);
+
+			// Select the h2.showInfo element and insert the *info* variable inside
+			// Be sure to find a method that will allow you to insert HTML
+			$("h2.showInfo").html(info);
+		});
+	});
+
+	</script>
+	
+</body>
+</html>
