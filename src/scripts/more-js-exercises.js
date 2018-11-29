@@ -5,7 +5,7 @@ const scales = (a, b, c, d, e, f, g, h) => {
     // console.log("A musical scale goes: " + a + ", " + b + ", " + c + ", " + d + ", " + e + ", " + f + ", " + g + ", " + h + "!");
     console.log(`A musical scale goes: ${a}, ${b}, ${c}, ${d}, ${e}, ${f}, ${g}, ${h}!`)
 }
-scales("stat", "re", "mi", "fa", "so", "la", "ti", "do");
+scales("do", "re", "mi", "fa", "so", "la", "ti", "do");
 
 // 2. Write a single function makeDeliciousSoup that takes  two arguments: a callback function called cook() and an array of RAW ingredients.
 
@@ -42,11 +42,11 @@ scales("stat", "re", "mi", "fa", "so", "la", "ti", "do");
 
 const canadianMagazines = ["24 images", "Alternatives Journal", "abOUT", "Above&Beyond", "L'Action nationale", "L'actualité", "Adbusters", "Advisor's Edge", "Alberta Report", "Algoma Ink", "Alive Magazine", "Auto Atlantic", "BC Report", "The Body Politic", "Brave Words & Bloody Knuckles", "Briarpatch", "Edmonton Gazette", "Brick", "Broken Pencil", "Canada World View", "Canada's History", "Canadian Art", "Canadian Business", "On Spec", "Canadian Dimension", "Canadian Forum", "Canadian Geographic", "Canadian Home & Country", "Canadian Literature", "Canadian Living", "Canadian Parliamentary Review", "ChartAttack", "Chatelaine", "Checkerspot", "Chickadee", "Ciné-Bulles", "Cinema Canada", "Cité Libre", "Contemporary Verse 2", "Corporate Knights", "Country Music News", "The Dalhousie Review", "Cult MTL", "Dogs in Canada", "The Dorchester Review", "Downhome", "Drug Facts for Young People", "Elementary Safety Book For Children", "Esprit de Corps", "Exclaim!", "Every Day Fiction", "fps", "fab", "fab", "abOUT", "Fashion", "Faze", "The Fiddlehead", "Flare", "Flare", "Flare", "Flare", "Frank", "Fugues", "Fuse", "GayCalgary", "Geez", "Geist", "Géographica", "Glow", "Golden Words", "Graffiti", "Harrowsmith", "HighGrader", "The Hockey News", "Homemakers", "Hunter and Cook", "International Hair Route Magazine", "Inuktitut", "KidsWorld", "Justice Magazine", "Legion Magazine", "Literary Review of Canada", "LOU LOU", "Maandblad de Krant", "Maclean's", "The Magazine", "Maisonneuve", "Maisonneuve", "The Malahat Review", "Mehfil Magazine", "Memewar", "MoneySense", "MONTECRISTO", "Les Mouches Fantastiques", "Music Express", "Flare", "Muskrat Magazine", "Natural Life", "Neo-opsis Science Fiction Magazine", "The New Quarterly", "Newfoundland Quarterly", "The Nerve", "Nightlife", "Northern Ontario Business", "On Spec", "Ontario Out of Doors", "Opera Canada", "Ottawa Business Journal", "Outdoor Canada", "Outlooks", "Owl", "Paaras", "Peace Magazine", "Photosho", "Playback", "Plenitude", "Popjournalism", "Pound", "Prairie Fire", "Quill & Quire", "Realm", "Rites", "Rockstar Weekly", "Room", "RPM", "Rue Morgue", "Ryerson Review of Journalism", "Saskatchewan History", "Saturday Night", "SAY", "Scoregolf", "Séquences", "Shameless", "Sharp", "Shift", "Sir John Magazine", "Siren", "Spacing", "Sportsnet Magazine", "Stitches: The Journal of Medical Humour", "Straight Goods", "Style at Home", "Swerve", "Take One", "Tamarack Review", "This Magazine", "TISH", "Toro", "Toronto Life", "Tribe", "TV Guide", "Up Here", "Uppercase", "Urban Male Magazine", "University Magazine", "Urban North - A Lifestyle Magazine", "Vancouver Magazine", "Vice 160", "The Walrus", "Wasted Youth", "Wayves", "Wayves", "Weddingbells", "The Western Producer", "Western Standard", "What If?", "Xtra!", "Xtra Ottawa", "Xtra Vancouver"]
 
-// const magazinesO = function () {
-//     if (let i = 0; i < canadianMagazines.length; i++) {
+const magazinesO = function() {
+    if (let i = 0; i < canadianMagazines.length; i++) {
 
-//     }
-// }
+    }
+}
 
 // 1. Iterate through the array
 // 2. If a 
@@ -54,17 +54,17 @@ const canadianMagazines = ["24 images", "Alternatives Journal", "abOUT", "Above&
 
 
 
-// 4.1 Make a new array of all the magazines that have the word`Canadian` in the title.
+4.1 Make a new array of all the magazines that have the word `Canadian` in the title.
 
-// 4.2 Find out if 'Flare' is in the canadianMagazines array.
+4.2 Find out if 'Flare' is in the canadianMagazines array.
 
-// 4.3 Write a function that checks how many times each magazine title is in the array and returns an object in the format { "Magazine Name": 3, "Magazine Name": 1 }
+4.3 Write a function that checks how many times each magazine title is in the array and returns an object in the format {"Magazine Name": 3, "Magazine Name": 1}
 
-// Pass the function you just wrote to another function.(The function you just wrote should evaluate to an object, remember!) This second function should accept an object and return a new array with each of the magazine titles appearing only once.
+Pass the function you just wrote to another function. (The function you just wrote should evaluate to an object, remember!) This second function should accept an object and return a new array with each of the magazine titles appearing only once.
 
-//     HINT: Try using Object.keys or Object.values
+HINT: Try using Object.keys or Object.values
 
-//         *** BONUS QUESTION ***
-//             Create a function that returns the sum of any number of integers.
+***BONUS QUESTION***
+Create a function that returns the sum of any number of integers. 
 
-//                 HINT: Use ES6.
+HINT: Use ES6.
