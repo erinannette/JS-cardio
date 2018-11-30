@@ -19,6 +19,10 @@ scales("stat", "re", "mi", "fa", "so", "la", "ti", "do");
 // The method of cooking is boiling. 
 // ['cooked onions', 'cooked carrots', 'cooked celery']
 
+// it looks to me like the function does two things:
+// 1. it defines the method of cooking (boiling)
+// 2. it adds in the word "cooked" to each ingredient in the array.
+
 // 1. 
 
 // const makeDeliciousSoup = (a,b){
