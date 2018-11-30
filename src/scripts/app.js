@@ -8,12 +8,26 @@ const scales = (a, b, c, d, e, f, g, h) => {
 scales("stat", "re", "mi", "fa", "so", "la", "ti", "do");
 
 // 2. Write a single function makeDeliciousSoup that takes  two arguments: a callback function called cook() and an array of RAW ingredients.
-
 // The cook function returns the string 'The method of cooking is' and then the argument passed into the cook function.
 
 // The result of the makeDeliciousSoup function should appear in the console like this:
 // The method of cooking is boiling. 
 // ['cooked onions', 'cooked carrots', 'cooked celery']
+
+// INPUT: callback function *cook()
+// OUTPUT:
+// The method of cooking is boiling. 
+// ['cooked onions', 'cooked carrots', 'cooked celery']
+
+// 1. 
+
+// const makeDeliciousSoup = (a,b){
+//     const ingredients = ["onions", "carrots", "celery"];
+//     const cook = () => {
+
+//     }
+// }
+
 
 // 2.5
 // Write a function that returns the EXACT SAME THING but takes cooking ingredients not as an array but as strings passed into the makeDeliciousSoup function. 
