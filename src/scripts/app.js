@@ -23,26 +23,30 @@ scales("do", "re", "mi", "fa", "so", "la", "ti", "do");
 // 2. it adds in the word "cooked" to each ingredient in the array.
 //    So I need to go through each item in the array and add in the word "cooked"
 
-const cook = (method) => {
-    return `The method of cooking is ${method}.`
+
+const cook = (cookMethod) => {
+    return `The method of cooking is ${cookMethod}.`
 }
-console.log(cook("boiling"));
+// console.log(cook("boiling"));
 
 // this function is adding the word "cooked" to each item in the array
 const makeDeliciousSoup = (callback, ingredient) => {
-    const soup = [];
-    ingredient.forEach(ing => {
 
-        // add the string "cooked" to each item in the array
-        let cookedIngredient = `cooked ${ingredient}`;
-        // then push each item into the cookedIngredients array
-        soup.push(cookedIngredient);
-        
-    });
+    const soup = [];
+
+    const ing = (item) => {
+        soup.push(`cooked ${item}`)
+    };
+
+    ingredient.forEach(ing);
+    
+    console.log(callback, soup);
 };
 
-makeDeliciousSoup(cook("boiling"), ["carrots", "celery", "noodles"]);
-console.log(makeDeliciousSoup);
+makeDeliciousSoup(cook("steaming"), ["carrots", "celery", "noodles"]);
+
+
+
 
 // 2.5
 // Write a function that returns the EXACT SAME THING but takes cooking ingredients not as an array but as strings passed into the makeDeliciousSoup function. 
