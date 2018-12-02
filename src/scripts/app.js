@@ -2,10 +2,9 @@
 // calScale("do", "re", "mi", "fa" , "so", "la", "ti", "do");
 
 const scales = (a, b, c, d, e, f, g, h) => {
-    // console.log("A musical scale goes: " + a + ", " + b + ", " + c + ", " + d + ", " + e + ", " + f + ", " + g + ", " + h + "!");
     console.log(`A musical scale goes: ${a}, ${b}, ${c}, ${d}, ${e}, ${f}, ${g}, ${h}!`)
 }
-scales("stat", "re", "mi", "fa", "so", "la", "ti", "do");
+scales("do", "re", "mi", "fa", "so", "la", "ti", "do");
 
 // 2. Write a single function makeDeliciousSoup that takes  two arguments: a callback function called cook() and an array of RAW ingredients.
 // The cook function returns the string 'The method of cooking is' and then the argument passed into the cook function.
@@ -14,7 +13,7 @@ scales("stat", "re", "mi", "fa", "so", "la", "ti", "do");
 // The method of cooking is boiling. 
 // ['cooked onions', 'cooked carrots', 'cooked celery']
 
-// INPUT: callback function *cook()
+// INPUT: callback function *cook()* , array of raw ingredients
 // OUTPUT:
 // The method of cooking is boiling. 
 // ['cooked onions', 'cooked carrots', 'cooked celery']
