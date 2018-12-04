@@ -71,27 +71,25 @@ makeDeliciousSoup(cook("steaming"), "carrots", "celery", "noodles");
 
 // Use these two functions in the function phoneAFriend. If your friend is available,return two console logs: "I'm calling 4162308439" and "Hi, Heather!"(or whatever phone number and friend name you enter). If your friend is not available, console log "I got voicemail."
 
-const phoneNumber = function (callback, number, available) {
-    if(number == "4166470490"){
-
-    }
-}
-const phoneName = function (name) {
-    if(name == "Tessa"){
-        
-    }
-}
-
-function phoneAFriend () {
-
-}
-
-
 // 3.5 Add another parameter to the phoneAFriend function called isScreeningYourCalls. If this parameter is true and you phone your friend, even though they are at home, you will get voicemail.
 
+// INPUT: 2 functions
+// OUTPUT: 
 
+const phoneName = function (name) {
+    return name;
+}
 
+const phoneAFriend = function (callback, number, available, isScreeningYourCalls) {
+    if(available === true && isScreeningYourCalls === false){
+        console.log(`I'm calling ${number}`);
+        console.log(`Hi ${callback}!`);
+    } else {
+        console.log("I got voicemail.")
+    }
+}
 
+phoneAFriend(phoneName("Tessa"),4166480490, true, false);
 
 // 4. Using this array of magazines printed in Canada, make a new array of all the magazines that begin with the letter O.
 
@@ -101,15 +99,19 @@ const canadianMagazines = ["24 images", "Alternatives Journal", "abOUT", "Above&
 // output: a new array containing only "O" titles
 
 // 1. Iterate through the array
-// 2. If a title starts with O, put that into a new array
+// 2. If a title starts with O, push that into a new array
 
-// const magazinesO = function () {
-//     if (let i = 0; i < canadianMagazines.length; i++) {
+const magazinesO = function () {
+    const newArray = [];
+    const magsWithO = (item) => {
+        newArray.push(item)
+    };
+    if(str.substring(0,1) === "O"){
+        canadianMagazines.forEach(magsWithO);
+    }
+};
 
-//     }
-// }
-
-
+magazinesO();
 
 // 4.1 Make a new array of all the magazines that have the word`Canadian` in the title.
 
