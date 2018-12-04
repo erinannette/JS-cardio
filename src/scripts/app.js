@@ -24,35 +24,44 @@ scales("do", "re", "mi", "fa", "so", "la", "ti", "do");
 //    So I need to go through each item in the array and add in the word "cooked"
 
 
-const cook = (cookMethod) => {
-    return `The method of cooking is ${cookMethod}.`
-}
+// const cook = (cookMethod) => {
+//     return `The method of cooking is ${cookMethod}.`
+// }
 // console.log(cook("boiling"));
 
 // this function is adding the word "cooked" to each item in the array
-const makeDeliciousSoup = (callback, ingredient) => {
+// const makeDeliciousSoup = (callback, ingredient) => {
 
-    const soup = [];
+//     const soup = [];
+//     const ing = (item) => {
+//         soup.push(`cooked ${item}`)
+//     };
+//     ingredient.forEach(ing);
+//     console.log(callback, soup);
+// };
 
-    const ing = (item) => {
-        soup.push(`cooked ${item}`)
-    };
-
-    ingredient.forEach(ing);
-    
-    console.log(callback, soup);
-};
-
-makeDeliciousSoup(cook("steaming"), ["carrots", "celery", "noodles"]);
-
-
-
+// makeDeliciousSoup(cook("steaming"), ["carrots", "celery", "noodles"]);
 
 // 2.5
 // Write a function that returns the EXACT SAME THING but takes cooking ingredients not as an array but as strings passed into the makeDeliciousSoup function. 
 
 // HINT: Use one of the special parameters from ES6
 
+const cook = (cookMethod) => {
+    return `The method of cooking is ${cookMethod}.`
+}
+
+const makeDeliciousSoup = (callback, ...ingredient) => {
+
+    const soup = [];
+    const ing = (item) => {
+        soup.push(`cooked ${item}`)
+    };
+    ingredient.forEach(ing);
+    console.log(callback, soup);
+};
+
+makeDeliciousSoup(cook("steaming"), "carrots", "celery", "noodles");
 
 
 
@@ -62,7 +71,20 @@ makeDeliciousSoup(cook("steaming"), ["carrots", "celery", "noodles"]);
 
 // Use these two functions in the function phoneAFriend. If your friend is available,return two console logs: "I'm calling 4162308439" and "Hi, Heather!"(or whatever phone number and friend name you enter). If your friend is not available, console log "I got voicemail."
 
+const phoneNumber = function (callback, number, available) {
+    if(number == "4166470490"){
 
+    }
+}
+const phoneName = function (name) {
+    if(name == "Tessa"){
+        
+    }
+}
+
+function phoneAFriend () {
+
+}
 
 
 // 3.5 Add another parameter to the phoneAFriend function called isScreeningYourCalls. If this parameter is true and you phone your friend, even though they are at home, you will get voicemail.
