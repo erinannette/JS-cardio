@@ -102,14 +102,23 @@ const canadianMagazines = ["24 images", "Alternatives Journal", "abOUT", "Above&
 // 1. Iterate through the array
 // 2. If a title starts with O, push that into a new array
 
-const magsWithO = function(magName) {
-    canadianMagazines.filter(magName === "O");
+const magsWithO = canadianMagazines.filter(myFunction);
+
+function myFunction (value) {
+    return value.substring(0,1) === "O";
 };
-magsWithO();
+console.log(magsWithO);
 
 // 4.1 Make a new array of all the magazines that have the word`Canadian` in the title.
+const magsWithCanadian = canadianMagazines.filter(canadaFunction);
+
+function canadaFunction (value) {
+    return value.substring(0,8) === "Canadian";
+};
+console.log(magsWithCanadian);
 
 // 4.2 Find out if 'Flare' is in the canadianMagazines array.
+
 
 // 4.3 Write a function that checks how many times each magazine title is in the array and returns an object in the format { "Magazine Name": 3, "Magazine Name": 1 }
 
