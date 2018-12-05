@@ -91,7 +91,8 @@ const phoneAFriend = function (callback, number, available, isScreeningYourCalls
 
 phoneAFriend(phoneName("Tessa"),4166480490, true, false);
 
-// 4. Using this array of magazines printed in Canada, make a new array of all the magazines that begin with the letter O.
+// 4. Using this array of magazines printed in Canada, make a new array of 
+// all the magazines that begin with the letter O.
 
 const canadianMagazines = ["24 images", "Alternatives Journal", "abOUT", "Above&Beyond", "L'Action nationale", "L'actualité", "Adbusters", "Advisor's Edge", "Alberta Report", "Algoma Ink", "Alive Magazine", "Auto Atlantic", "BC Report", "The Body Politic", "Brave Words & Bloody Knuckles", "Briarpatch", "Edmonton Gazette", "Brick", "Broken Pencil", "Canada World View", "Canada's History", "Canadian Art", "Canadian Business", "On Spec", "Canadian Dimension", "Canadian Forum", "Canadian Geographic", "Canadian Home & Country", "Canadian Literature", "Canadian Living", "Canadian Parliamentary Review", "ChartAttack", "Chatelaine", "Checkerspot", "Chickadee", "Ciné-Bulles", "Cinema Canada", "Cité Libre", "Contemporary Verse 2", "Corporate Knights", "Country Music News", "The Dalhousie Review", "Cult MTL", "Dogs in Canada", "The Dorchester Review", "Downhome", "Drug Facts for Young People", "Elementary Safety Book For Children", "Esprit de Corps", "Exclaim!", "Every Day Fiction", "fps", "fab", "fab", "abOUT", "Fashion", "Faze", "The Fiddlehead", "Flare", "Flare", "Flare", "Flare", "Frank", "Fugues", "Fuse", "GayCalgary", "Geez", "Geist", "Géographica", "Glow", "Golden Words", "Graffiti", "Harrowsmith", "HighGrader", "The Hockey News", "Homemakers", "Hunter and Cook", "International Hair Route Magazine", "Inuktitut", "KidsWorld", "Justice Magazine", "Legion Magazine", "Literary Review of Canada", "LOU LOU", "Maandblad de Krant", "Maclean's", "The Magazine", "Maisonneuve", "Maisonneuve", "The Malahat Review", "Mehfil Magazine", "Memewar", "MoneySense", "MONTECRISTO", "Les Mouches Fantastiques", "Music Express", "Flare", "Muskrat Magazine", "Natural Life", "Neo-opsis Science Fiction Magazine", "The New Quarterly", "Newfoundland Quarterly", "The Nerve", "Nightlife", "Northern Ontario Business", "On Spec", "Ontario Out of Doors", "Opera Canada", "Ottawa Business Journal", "Outdoor Canada", "Outlooks", "Owl", "Paaras", "Peace Magazine", "Photosho", "Playback", "Plenitude", "Popjournalism", "Pound", "Prairie Fire", "Quill & Quire", "Realm", "Rites", "Rockstar Weekly", "Room", "RPM", "Rue Morgue", "Ryerson Review of Journalism", "Saskatchewan History", "Saturday Night", "SAY", "Scoregolf", "Séquences", "Shameless", "Sharp", "Shift", "Sir John Magazine", "Siren", "Spacing", "Sportsnet Magazine", "Stitches: The Journal of Medical Humour", "Straight Goods", "Style at Home", "Swerve", "Take One", "Tamarack Review", "This Magazine", "TISH", "Toro", "Toronto Life", "Tribe", "TV Guide", "Up Here", "Uppercase", "Urban Male Magazine", "University Magazine", "Urban North - A Lifestyle Magazine", "Vancouver Magazine", "Vice 160", "The Walrus", "Wasted Youth", "Wayves", "Wayves", "Weddingbells", "The Western Producer", "Western Standard", "What If?", "Xtra!", "Xtra Ottawa", "Xtra Vancouver"]
 
@@ -101,17 +102,10 @@ const canadianMagazines = ["24 images", "Alternatives Journal", "abOUT", "Above&
 // 1. Iterate through the array
 // 2. If a title starts with O, push that into a new array
 
-const magazinesO = function () {
-    const newArray = [];
-    const magsWithO = (item) => {
-        newArray.push(item)
-    };
-    if(str.substring(0,1) === "O"){
-        canadianMagazines.forEach(magsWithO);
-    }
+const magsWithO = function(magName) {
+    canadianMagazines.filter(magName === "O");
 };
-
-magazinesO();
+magsWithO();
 
 // 4.1 Make a new array of all the magazines that have the word`Canadian` in the title.
 
