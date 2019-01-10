@@ -1,10 +1,10 @@
 // 1.Create a function that accepts eight arguments and returns the string "A musical scale goes: do, re, mi, fa , so, la, ti, do!" - but does NOT print anything to the console.
 // calScale("do", "re", "mi", "fa" , "so", "la", "ti", "do");
 
-const scales = (a, b, c, d, e, f, g, h) => {
-    console.log(`A musical scale goes: ${a}, ${b}, ${c}, ${d}, ${e}, ${f}, ${g}, ${h}!`)
-}
-scales("do", "re", "mi", "fa", "so", "la", "ti", "do");
+// const scales = (a, b, c, d, e, f, g, h) => {
+//     console.log(`A musical scale goes: ${a}, ${b}, ${c}, ${d}, ${e}, ${f}, ${g}, ${h}!`)
+// }
+// scales("do", "re", "mi", "fa", "so", "la", "ti", "do");
 
 // 2. Write a single function makeDeliciousSoup that takes two arguments: a callback function called cook() and an array of RAW ingredients.
 // The cook function returns the string 'The method of cooking is' and then the argument passed into the cook function.
@@ -47,21 +47,21 @@ scales("do", "re", "mi", "fa", "so", "la", "ti", "do");
 
 // HINT: Use one of the special parameters from ES6
 
-const cook = (cookMethod) => {
-    return `The method of cooking is ${cookMethod}.`
-}
+// const cook = (cookMethod) => {
+//     return `The method of cooking is ${cookMethod}.`
+// }
 
-const makeDeliciousSoup = (callback, ...ingredient) => {
+// const makeDeliciousSoup = (callback, ...ingredient) => {
 
-    const soup = [];
-    const ing = (item) => {
-        soup.push(`cooked ${item}`)
-    };
-    ingredient.forEach(ing);
-    console.log(callback, soup);
-};
+//     const soup = [];
+//     const ing = (item) => {
+//         soup.push(`cooked ${item}`)
+//     };
+//     ingredient.forEach(ing);
+//     console.log(callback, soup);
+// };
 
-makeDeliciousSoup(cook("steaming"), "carrots", "celery", "noodles");
+// makeDeliciousSoup(cook("steaming"), "carrots", "celery", "noodles");
 
 
 
@@ -76,20 +76,20 @@ makeDeliciousSoup(cook("steaming"), "carrots", "celery", "noodles");
 // INPUT: 2 functions
 // OUTPUT: 
 
-const phoneName = function (name) {
-    return name;
-}
+// const phoneName = function (name) {
+//     return name;
+// }
 
-const phoneAFriend = function (callback, number, available, isScreeningYourCalls) {
-    if(available === true && isScreeningYourCalls === false){
-        console.log(`I'm calling ${number}`);
-        console.log(`Hi ${callback}!`);
-    } else {
-        console.log("I got voicemail.")
-    }
-}
+// const phoneAFriend = function (callback, number, available, isScreeningYourCalls) {
+//     if(available === true && isScreeningYourCalls === false){
+//         console.log(`I'm calling ${number}`);
+//         console.log(`Hi ${callback}!`);
+//     } else {
+//         console.log("I got voicemail.")
+//     }
+// }
 
-phoneAFriend(phoneName("Tessa"),4166480490, true, false);
+// phoneAFriend(phoneName("Tessa"),4166480490, true, false);
 
 // 4. Using this array of magazines printed in Canada, make a new array of 
 // all the magazines that begin with the letter O.
@@ -110,7 +110,7 @@ function myFunction (value) {
 console.log(magsWithO);
 
 // 4.1 Make a new array of all the magazines that have the word`Canadian` in the title.
-const magsWithCanadian = canadianMagazines.filter(canadaFunction);
+// const magsWithCanadian = canadianMagazines.filter(canadaFunction);
 
 function canadaFunction (value) {
     return value.substring(0,8) === "Canadian";
