@@ -110,7 +110,7 @@ function myFunction (value) {
 console.log(magsWithO);
 
 // 4.1 Make a new array of all the magazines that have the word`Canadian` in the title.
-// const magsWithCanadian = canadianMagazines.filter(canadaFunction);
+const magsWithCanadian = canadianMagazines.filter(canadaFunction);
 
 function canadaFunction (value) {
     return value.substring(0,8) === "Canadian";
@@ -118,6 +118,8 @@ function canadaFunction (value) {
 console.log(magsWithCanadian);
 
 // 4.2 Find out if 'Flare' is in the canadianMagazines array.
+const result = canadianMagazines.filter(word => word.value === 'Flare');
+console.log(result);
 
 
 // 4.3 Write a function that checks how many times each magazine title is in the array and returns an object in the format { "Magazine Name": 3, "Magazine Name": 1 }
